@@ -1,0 +1,4 @@
+Yes the proper output appears in the Tera Term session when we connect to the USB-UART PMOD. 
+So when i type the following command is terminal with the SSH session: echo Hello > /dev/tty_USB_351
+
+Hello pops up in the Tera Term console. We have also tested  with longer batches of characters and our program runs fine.

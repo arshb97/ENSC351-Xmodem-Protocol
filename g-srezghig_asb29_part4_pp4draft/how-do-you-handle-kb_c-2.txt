@@ -1,0 +1,10 @@
+Receivers perspective:
+From our understanding, KB_C is the receiver's keyboard cancel and the different cases were handled as below:
+
+1) Once KB_C is received, move to top level state and call can8() and give result message to let user know that a keyboard cancel was called.
+
+2) If a KB_C was called by the sender, the receiver checks the boolean variable KbCan to see if it's true or false.  Then the suitable action is executed based on KbCan being true or false.
+
+3) If KB_C was called in the Process_CAN state of the receiver, the receiver will remain in the Process_CAN state until it receives a CAN byte where it will then proceed to done and result message will be given.
+
+All these states will result in the receiver calling can8() function to let the sender know to cancel transmission, and end the program.

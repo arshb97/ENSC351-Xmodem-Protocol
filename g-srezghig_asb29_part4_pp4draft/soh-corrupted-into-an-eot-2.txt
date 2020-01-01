@@ -1,0 +1,1 @@
+When an SOH is corrupted into an EOT, the receiver will travel from FirstByte state to the EOT state where it will then call purge(), send a NAK, then waits for the second EOT. In the event that the receiver does not receive the second EOT in time, it will terminate the program and exit with a timeout result message.
